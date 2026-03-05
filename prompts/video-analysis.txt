@@ -1,0 +1,62 @@
+Analyze this video for content creation insights. Focus on what makes it engaging, what psychological triggers it uses, and how it's structured for retention.
+
+Return ONLY valid JSON with this exact structure — no markdown, no backticks, no explanation:
+
+{
+  "hook": {
+    "type": "question|shock|curiosity_gap|pattern_interrupt|bold_claim|story_open|visual_spectacle|relatable_moment",
+    "description": "What the hook does and why it stops the scroll",
+    "duration_seconds": 0,
+    "text_overlay": "Any on-screen text in the hook, or null",
+    "audio_element": "Music, sound effect, voice tone, silence — whatever's used",
+    "effectiveness": "Why this hook works or doesn't (1-2 sentences)"
+  },
+  "pacing": {
+    "total_duration_seconds": 0,
+    "avg_scene_length_seconds": 0,
+    "cut_count": 0,
+    "energy_curve": "builds|steady|peaks_and_valleys|front_loaded|slow_burn",
+    "retention_risk_points": ["Timestamps where viewers likely drop off and why"]
+  },
+  "scenes": [
+    {
+      "timestamp": "0:00-0:03",
+      "description": "What happens visually and audibly",
+      "visual_style": "talking_head|b_roll|screen_record|text_animation|montage|transition_effect|split_screen",
+      "audio": "voiceover|music|silence|sound_effect|ambient|dialogue",
+      "text_overlay": "Any on-screen text, or null",
+      "purpose": "Why this scene exists in the video's structure"
+    }
+  ],
+  "script": {
+    "full_transcript": "Word-for-word transcript of all speech",
+    "word_count": 0,
+    "words_per_minute": 0,
+    "tone": "casual|authoritative|emotional|humorous|urgent|educational",
+    "key_phrases": ["Memorable or repeated phrases"]
+  },
+  "psychology": {
+    "primary_emotion": "curiosity|fear|excitement|relatability|aspiration|outrage|nostalgia|satisfaction",
+    "secondary_emotions": [],
+    "retention_tactics": ["List every tactic: open loops, pattern interrupts, promises, countdowns, etc."],
+    "audience_identity": "Who this video is speaking to and what identity it validates",
+    "cta_type": "follow|comment|share|link|save|none",
+    "cta_effectiveness": "How natural or forced the CTA feels"
+  },
+  "production": {
+    "lighting": "natural|studio|ring_light|dramatic|mixed",
+    "camera_movement": "static|handheld|smooth_pan|zoom|dynamic",
+    "editing_style": "minimal|jump_cuts|fast_cuts|transitions_heavy|raw",
+    "caption_style": "none|static|animated|word_by_word|highlighted",
+    "thumbnail_potential": "What frame would make the best thumbnail and why"
+  },
+  "viral_signals": {
+    "shareability_score": 0,
+    "controversy_level": 0,
+    "relatability_score": 0,
+    "novelty_score": 0,
+    "save_worthy_score": 0,
+    "comment_bait_score": 0,
+    "reasoning": "2-3 sentences on why this video would or wouldn't spread"
+  }
+}

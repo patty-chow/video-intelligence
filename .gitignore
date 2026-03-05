@@ -1,0 +1,9 @@
+.env
+node_modules/
+videos/*.mp4
+videos/*.mov
+videos/*.avi
+output/analyses/*.json
+output/scripts/*.md
+output/breakdowns/*.md
+output/trends/*.md

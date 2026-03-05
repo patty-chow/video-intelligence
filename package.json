@@ -1,0 +1,18 @@
+{
+  "name": "video-intelligence",
+  "version": "1.0.0",
+  "description": "AI-powered video analysis pipeline — Gemini for video understanding, Claude for strategy and content generation",
+  "main": "src/pipeline.js",
+  "scripts": {
+    "analyze": "node src/pipeline.js",
+    "batch": "node src/batch.js",
+    "test": "node src/pipeline.js videos/sample.mp4 breakdown"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.7"
+  },
+  "keywords": ["video", "ai", "gemini", "claude", "content-creation", "viral"],
+  "license": "MIT"
+}
