@@ -9,10 +9,17 @@
     "test": "node src/pipeline.js videos/sample.mp4 breakdown"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.21.0",
     "@anthropic-ai/sdk": "^0.39.0",
+    "@google/genai": "^1.44.0",
     "dotenv": "^16.4.7"
   },
-  "keywords": ["video", "ai", "gemini", "claude", "content-creation", "viral"],
+  "keywords": [
+    "video",
+    "ai",
+    "gemini",
+    "claude",
+    "content-creation",
+    "viral"
+  ],
   "license": "MIT"
 }

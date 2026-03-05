@@ -1,4 +1,4 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenAI } = require("@google/genai");
 const fs = require("fs");
 const path = require("path");
 const defaults = require("../config/defaults");
@@ -21,8 +21,7 @@ async function analyzeVideo(videoPath) {
     throw new Error("GEMINI_API_KEY not found in environment. Copy .env.example to .env and add your key.");
   }
 
-  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: defaults.models.gemini });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
   // Read video file and convert to base64
   const videoData = fs.readFileSync(videoPath);
@@ -40,17 +39,19 @@ async function analyzeVideo(videoPath) {
 
   console.log(`  Sending ${path.basename(videoPath)} to Gemini (${(videoData.length / 1024 / 1024).toFixed(1)}MB)...`);
 
-  const result = await model.generateContent([
-    PROMPT,
-    {
-      inlineData: {
-        mimeType,
-        data: base64Video,
+  const result = await ai.models.generateContent({
+    model: defaults.models.gemini,
+    contents: [
+      {
+        parts: [
+          { text: PROMPT },
+          { inlineData: { mimeType, data: base64Video } },
+        ],
       },
-    },
-  ]);
+    ],
+  });
 
-  const responseText = result.response.text();
+  const responseText = result.text;
 
   // Parse JSON — strip markdown fences if Gemini adds them
   const cleaned = responseText.replace(/```json\n?|```\n?/g, "").trim();

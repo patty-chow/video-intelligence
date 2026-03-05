@@ -7,8 +7,8 @@ module.exports = {
 
   // Model versions (update these as new versions release)
   models: {
-    gemini: "gemini-2.0-flash",
-    claude: "claude-sonnet-4-5-20250514"
+    gemini: "gemini-2.5-flash",
+    claude: "claude-sonnet-4-6"
   },
 
   // Frame extraction settings for Claude-only fallback mode

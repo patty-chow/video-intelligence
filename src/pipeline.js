@@ -70,6 +70,11 @@ async function run() {
   console.log(`${"=".repeat(60)}\n`);
 }
 
+process.on("unhandledRejection", (err) => {
+  console.error("\nUnhandled error:", err.message || err);
+  process.exit(1);
+});
+
 run().catch((err) => {
   console.error("\nPipeline error:", err.message);
   process.exit(1);
