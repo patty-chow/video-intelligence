@@ -1,4 +1,5 @@
-Analyze this video for content creation insights. Focus on what makes it engaging, what psychological triggers it uses, and how it's structured for retention.
+Analyze this video for content creation insights. Focus on what makes it engaging, what
+psychological triggers it uses, and how it's structured for retention.
 
 Return ONLY valid JSON with this exact structure — no markdown, no backticks, no explanation:
 
@@ -22,7 +23,7 @@ Return ONLY valid JSON with this exact structure — no markdown, no backticks, 
     {
       "timestamp": "0:00-0:03",
       "description": "What happens visually and audibly",
-      "visual_style": "talking_head|b_roll|screen_record|text_animation|montage|transition_effect|split_screen",
+      "visual_style": "talking_head|b_roll|screen_record|text_animation|montage|transition_effect|split_screen|mixed_media|stop_motion|compare_contrast",
       "audio": "voiceover|music|silence|sound_effect|ambient|dialogue",
       "text_overlay": "Any on-screen text, or null",
       "purpose": "Why this scene exists in the video's structure"
@@ -46,7 +47,7 @@ Return ONLY valid JSON with this exact structure — no markdown, no backticks, 
   "production": {
     "lighting": "natural|studio|ring_light|dramatic|mixed",
     "camera_movement": "static|handheld|smooth_pan|zoom|dynamic",
-    "editing_style": "minimal|jump_cuts|fast_cuts|transitions_heavy|raw",
+    "editing_style": "minimal|jump_cuts|fast_cuts|transitions_heavy|raw|mixed_media_analog|stop_motion",
     "caption_style": "none|static|animated|word_by_word|highlighted",
     "thumbnail_potential": "What frame would make the best thumbnail and why"
   },
@@ -58,5 +59,17 @@ Return ONLY valid JSON with this exact structure — no markdown, no backticks, 
     "save_worthy_score": 0,
     "comment_bait_score": 0,
     "reasoning": "2-3 sentences on why this video would or wouldn't spread"
+  },
+  "creator_fit": {
+    "personality_presence_score": 0,
+    "personality_presence_notes": "Is the creator visible as a person — face, voice, or personality — or is it art only? What's missing?",
+    "pillar_alignment": "the_art|the_process|the_life|mixed|unclear",
+    "pillar_notes": "Which of the three content pillars does this serve, and how well?",
+    "brand_deal_readiness_score": 0,
+    "brand_deal_notes": "Does this video show enough lifestyle, personality, or context for a brand to want to attach their name to it? What's missing?",
+    "low_lift_learnings": "If this is a reference video from another creator, what's the simplest thing Brian could steal from this format and execute in under 4 hours?",
+    "hook_to_steal": "The single most replicable hook idea from this video that Brian could adapt for his mixed media niche",
+    "momentum_rating": "post_now|needs_work|reference_only",
+    "momentum_notes": "One honest sentence on whether Brian should be inspired to post something like this immediately or study it for later"
   }
 }
