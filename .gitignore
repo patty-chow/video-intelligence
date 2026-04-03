@@ -7,3 +7,4 @@ output/analyses/*.json
 output/scripts/*.md
 output/breakdowns/*.md
 output/trends/*.md
+videos/
